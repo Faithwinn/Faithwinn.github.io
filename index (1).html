@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Faithwin Gbadamosi: GIS, remote sensing and spatial data science for energy, environment and health.">
+<title>Faithwin Gbadamosi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Fira+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a classic academic homepage; quiet, ordered, confident.
+   IDEA: a printed faculty profile page: sidebar card plus a justified serif column.
+   PICTURE: the profile card itself, then the energy, environment and health nexus under Research.
+   COLOUR and TYPE: white page, black text, grey rules; Source Serif 4 for reading, Fira Sans for navigation and the sidebar.
+   LAYOUT: top nav, sticky left profile column, main column of ruled sections. */
+:root{color-scheme:light;--bg:#fff;--ink:#111;--mute:#555;--rule:#dcdcdc;--soft:#f4f4f4}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.75 "Source Serif 4",Georgia,serif;overflow-x:clip}
+a{color:var(--ink);text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--bg);padding:8px;z-index:9}
+.sans{font-family:"Fira Sans",system-ui,sans-serif}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav .in{max-width:1280px;margin:auto;padding:0 max(3vw,16px);display:flex;gap:34px;height:68px;align-items:center;overflow-x:auto;scrollbar-width:none}
+nav a{flex:none;font:400 18px "Fira Sans",sans-serif;text-decoration:none;color:var(--ink);padding:8px 0;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--ink)}nav a.home{font-weight:500;border-color:var(--ink)}
+.wrap{max-width:1280px;margin:auto;padding:0 max(3vw,16px);display:grid;grid-template-columns:270px minmax(0,1fr);gap:clamp(32px,5vw,90px)}
+aside{position:sticky;top:68px;align-self:start;padding:44px 0 32px;font-family:"Fira Sans",sans-serif}
+.photo{width:240px;height:240px;border-radius:50%;border:1px solid var(--rule);padding:6px;background:var(--bg)}
+.photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+aside h2{font:500 28px/1.2 "Fira Sans",sans-serif;margin:20px 0 8px}
+aside .ttl{font-size:19px;line-height:1.5;margin:0 0 24px}
+aside ul{list-style:none;margin:0;padding:0}
+aside li{margin:0 0 10px}
+aside li a,aside li span{display:flex;align-items:center;gap:12px;font-size:19px;text-decoration:none;min-height:36px}
+aside li a:hover{text-decoration:underline}
+aside svg{width:20px;height:20px;flex:none;fill:currentColor}
+main{padding:40px 0 60px}
+.eyebrow{font:400 16px "Fira Sans",sans-serif;color:var(--mute);letter-spacing:.02em;margin:0}
+h1{font:700 clamp(36px,4.4vw,48px)/1.1 "Source Serif 4",serif;margin:8px 0 22px}
+.lede{font-size:clamp(20px,2vw,24px);line-height:1.6;margin:0 0 18px}
+p,.proj li{text-align:justify;text-justify:inter-word}
+aside p{text-align:left}
+p{margin:0 0 16px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin:26px 0 30px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;background:var(--ink);color:var(--bg);border-radius:4px;font:500 17px "Fira Sans",sans-serif;text-decoration:none}
+.btn:hover{opacity:.85}
+.tl{font:400 18px "Fira Sans",sans-serif}
+.glance{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid var(--ink);border-bottom:1px solid var(--rule);margin:0 0 10px}
+.glance div{padding:18px 18px 18px 0;border-right:1px solid var(--rule);margin-right:18px}
+.glance div:last-child{border-right:0;margin-right:0}
+.glance b{display:block;font:700 clamp(30px,3vw,40px)/1.1 "Source Serif 4",serif}
+.glance span{display:block;font:400 15px/1.45 "Fira Sans",sans-serif;color:var(--mute);margin-top:6px}
+section{padding-top:44px}
+h2.sec{font:700 clamp(28px,3vw,34px)/1.2 "Source Serif 4",serif;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+h3{font:700 23px/1.3 "Source Serif 4",serif;margin:30px 0 10px}
+h4{font:500 15px "Fira Sans",sans-serif;color:var(--mute);margin:26px 0 8px;letter-spacing:.02em}
+.nexus{margin:6px 0 10px;padding:24px;border:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
+.nexus svg{width:100%;height:auto;max-width:440px;display:block;margin:auto;color:var(--ink)}
+.nexus figcaption{font-size:16px;color:var(--mute);text-align:justify}
+.proj ul{margin:8px 0 0;padding-left:22px}.proj li{margin:4px 0}
+.kw{font:400 15px "Fira Sans",sans-serif;color:var(--mute);margin-top:8px}
+ol.pubs{padding-left:26px;margin:0}ol.pubs li{margin:0 0 14px;padding-left:4px;text-align:left}
+.st{font:500 14px "Fira Sans",sans-serif;border:1px solid var(--ink);padding:0 6px;border-radius:3px;margin-left:4px;white-space:nowrap}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:10px 0;border-top:1px solid var(--rule)}
+.list li:first-child{border-top:0}
+.list .d{font:400 16px "Fira Sans",sans-serif;color:var(--mute);white-space:nowrap;text-align:right;padding-top:3px}
+.list small{display:block;color:var(--mute);font-size:16px;line-height:1.5}
+.news li{grid-template-columns:100px minmax(0,1fr)}.news .d{text-align:left;color:var(--ink);font-weight:500}
+footer{border-top:1px solid var(--rule);margin-top:50px;padding-top:18px;font:400 15px "Fira Sans",sans-serif;color:var(--mute)}
+@media(max-width:900px){
+ .wrap{grid-template-columns:minmax(0,1fr);gap:0}
+ aside{position:static;display:grid;grid-template-columns:130px minmax(0,1fr);gap:4px 22px;align-items:center;padding:28px 0 8px;border-bottom:1px solid var(--rule)}
+ .photo{width:130px;height:130px;grid-row:span 2}
+ aside h2{display:none}
+ .eyebrow{display:none}aside .ttl{margin:0;font-size:16px}
+ aside ul{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:0 22px;margin-top:14px}
+ aside li a,aside li span{font-size:16px}
+ .nexus{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:760px){.glance{grid-template-columns:repeat(2,minmax(0,1fr))}.glance div:nth-child(2){border-right:0;margin-right:0}.glance div:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
+@media(max-width:600px){body{font-size:17px}p,.proj li,.nexus figcaption{text-align:left}nav .in{gap:22px}nav a{font-size:16px}.news li{grid-template-columns:minmax(0,1fr);gap:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#sat{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav><div class="in">
+  <a class="home" href="#top">Homepage</a><a href="#research">Research</a><a href="#publications">Publications</a><a href="#teaching">Teaching</a><a href="#news">News</a><a href="#contact">CV &amp; Contact</a>
+</div></nav>
+
+<div class="wrap" id="top">
+<aside>
+  <div class="photo"><img src="profile.jpg" alt="Faithwin Gbadamosi" width="640" height="640"></div>
+  <div><h2>Faithwin Gbadamosi</h2>
+  <p class="ttl">Ph.D. Candidate in Geography, University at Buffalo</p></div>
+  <ul>
+    <li><a href="Faithwin_Gbadamosi_CV.pdf"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H4V2h2zm8 1.5V8h4.5L14 3.5zM7 12h10v1.6H7zm0 3.5h10v1.6H7zm0-7h5v1.6H7z"/></svg>Curriculum Vitae</a></li>
+    <li><span><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>Denver, CO, USA</span></li>
+    <li><a href="mailto:figbadam@buffalo.edu"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zm2 2v.5l8 5.5 8-5.5V7l-8 5.5z"/></svg>Email</a></li>
+    <li><a href="https://www.linkedin.com/in/faithwingbadamosi"><svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zm4 7v8h2.5v-8zm1.25-4a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8zM11 10v8h2.5v-4.2c0-1.2.5-1.9 1.5-1.9s1.4.7 1.4 1.9V18H19v-5c0-2.3-1.2-3.2-2.9-3.2-1.2 0-2 .6-2.6 1.4V10z"/></svg>LinkedIn</a></li>
+    <li><a href="https://github.com/Faithwinn"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 2.9.8.1-.7.4-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.5-1.3.1-2.7 0 0 .9-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>GitHub</a></li>
+  </ul>
+</aside>
+
+<main id="main">
+  <p class="eyebrow">Ph.D. Candidate · Geography · University at Buffalo</p>
+  <h1>Faithwin Gbadamosi</h1>
+  <p class="lede">My research uses GIS, remote sensing and spatial data science to understand how energy production shapes the environment and human health.</p>
+  <p>I am a Ph.D. candidate in Geography at the University at Buffalo. My dissertation examines the nexus of energy, environment and health in the Niger Delta. I map oil spills and artisanal refining from satellite data, build contamination indices that rank places for remediation, and pair those maps with the lived experience of communities who live beside oil infrastructure. Before graduate school I worked in Nigeria's oil and gas sector.</p>
+  <p>I am also a Graduate Intern at the National Laboratory of the Rockies in Denver, where I support energy innovation programs focused on critical minerals, grid power and digital infrastructure.</p>
+  <div class="actions">
+    <a class="btn" href="Faithwin_Gbadamosi_CV.pdf">Download CV (PDF)</a>
+    <a class="tl" href="mailto:figbadam@buffalo.edu">Email</a>
+    <a class="tl" href="#publications">Publications</a>
+  </div>
+  <div class="glance" aria-label="At a glance">
+    <div><b>1,500+</b><span>geotagged oil spill records mapped and analyzed</span></div>
+    <div><b>60+</b><span>students taught in statistics, GIS and remote sensing</span></div>
+    <div><b>7</b><span>honors and awards, including the Mark Diamond Research Fund</span></div>
+    <div><b>3</b><span>countries where I have presented: the US, Canada and Germany</span></div>
+  </div>
+
+  <section id="research">
+    <h2 class="sec">Research highlights</h2>
+    <figure class="nexus">
+      <svg viewBox="0 0 500 440" role="img" aria-label="Three overlapping circles: Energy, Environment and Health, with spatial data science at the center">
+        <defs><path id="orbit" d="M250 28 A232 196 0 1 1 249.9 28"/></defs>
+        <use href="#orbit" fill="none" stroke="currentColor" stroke-opacity=".3" stroke-dasharray="2 6"/>
+        <g fill="currentColor" fill-opacity=".04" stroke="currentColor" stroke-opacity=".6"><circle cx="180" cy="175" r="130"/><circle cx="320" cy="175" r="130"/><circle cx="250" cy="292" r="130"/></g>
+        <g fill="currentColor" font-family="Fira Sans,sans-serif" text-anchor="middle">
+          <g font-family="Source Serif 4,serif" font-weight="700" font-size="22"><text x="122" y="118">Energy</text><text x="378" y="118">Environment</text><text x="250" y="350">Health</text></g>
+          <g font-size="13" fill-opacity=".8"><text x="122" y="142">Oil and gas</text><text x="122" y="160">Critical minerals</text><text x="122" y="178">Grid and innovation</text><text x="378" y="142">Oil spills</text><text x="378" y="160">Vegetation loss</text><text x="378" y="178">Land and water</text><text x="250" y="372">Exposure</text><text x="250" y="390">Food security</text><text x="250" y="408">Livelihoods</text></g>
+          <circle cx="250" cy="214" r="44"/>
+          <g font-size="12.5" font-weight="500" class="inv"><text x="250" y="210">Spatial</text><text x="250" y="226">data science</text></g>
+        </g>
+        <g id="sat" fill="currentColor"><rect x="-6" y="-5" width="12" height="10" rx="2"/><rect x="-20" y="-3" width="12" height="6" fill-opacity=".5"/><rect x="8" y="-3" width="12" height="6" fill-opacity=".5"/><animateMotion dur="36s" repeatCount="indefinite" rotate="auto"><mpath href="#orbit"/></animateMotion></g>
+      </svg>
+      <figcaption>My work sits where energy, environment and health meet. Satellite remote sensing lets me observe these links across large and hard-to-reach places, and spatial data science turns those observations into evidence for remediation and policy.</figcaption>
+    </figure>
+    <div id="projects"></div>
+  </section>
+
+  <section id="publications">
+    <h2 class="sec">Publications</h2>
+    <h4>Peer-reviewed articles</h4>
+    <ol class="pubs">
+      <li><b>Gbadamosi, F.</b>, &amp; Aldstadt, J. (2025). The interplay of oil exploitation, environmental degradation and health in the Niger Delta: A scoping review. <i>Tropical Medicine &amp; International Health</i>, 30(5), 351–367. <a href="https://doi.org/10.1111/tmi.14108">https://doi.org/10.1111/tmi.14108</a></li>
+      <li><b>Gbadamosi, F.</b>, Popoola, Y., Olaniyan, F., Adesola, R., &amp; Unim, B. (2023). Rural-urban variation in willingness to donate blood in Ibadan region, Nigeria. <i>Population Medicine</i>, 5(Supplement), A1620. <a href="https://doi.org/10.18332/popmed/165205">https://doi.org/10.18332/popmed/165205</a></li>
+    </ol>
+    <h4>Work in progress</h4>
+    <ol class="pubs">
+      <li><b>Gbadamosi, F.</b> Temporal shifts in vegetation disturbance from artisanal oil refining in the Niger Delta: A Sentinel-2 NDVI and contamination index approach. <i>Environmental Science and Pollution Research</i>. <span class="st">Under review</span></li>
+      <li><b>Gbadamosi, F.</b>, &amp; Abdulmojeed, K. Sacrifice zones and sublethal violence: A comparative analysis of oil-induced environmental health injustice in the Niger Delta and the Ecuadorian Amazon. <i>ACME: An International Journal for Critical Geographies</i>. <span class="st">Under review</span></li>
+      <li><b>Gbadamosi, F.</b> Oil pollution and food insecurity in the Niger Delta. <span class="st">In preparation</span></li>
+    </ol>
+  </section>
+
+  <section id="teaching">
+    <h2 class="sec">Teaching experience</h2>
+    <p>At the University at Buffalo I have taught more than 60 students in statistics, spatial data science and GIS. As Instructor of Record for Multivariate Statistics, I designed the syllabus and set and graded weekly assignments and final exams. In 2026 I received the Department of Geography Teaching Excellence Award.</p>
+    <ul class="list">
+      <li><div><b>Instructor of Record, Multivariate Statistics</b><small>Department of Geography, University at Buffalo</small></div><span class="d">2023–present</span></li>
+      <li><div><b>Teaching Assistant, Geographic Information Systems</b><small>Department of Geography, University at Buffalo</small></div><span class="d">2023–present</span></li>
+      <li><div><b>Teaching Assistant, Remote Sensing</b><small>Department of Geography, University at Buffalo</small></div><span class="d">2023–present</span></li>
+    </ul>
+  </section>
+
+  <section id="news"><h2 class="sec">Recent news</h2><ul class="list news" id="newsList"></ul></section>
+  <section id="education"><h2 class="sec">Education</h2><ul class="list" id="edu"></ul></section>
+  <section id="appointments"><h2 class="sec">Professional appointments</h2><ul class="list" id="jobs"></ul></section>
+  <section id="awards"><h2 class="sec">Selected honors and awards</h2><ul class="list" id="awardList"></ul></section>
+  <section id="talks"><h2 class="sec">Selected presentations</h2><ul class="list" id="talkList"></ul>
+    <h4>International engagement</h4><ul class="list" id="intl"></ul></section>
+  <section id="service"><h2 class="sec">Affiliations and service</h2>
+    <h4>Peer review</h4><ul class="list" id="review"></ul>
+    <h4>Memberships and leadership</h4><ul class="list" id="members"></ul></section>
+
+  <section id="contact">
+    <h2 class="sec">CV and contact</h2>
+    <p>I welcome conversations about research collaboration, energy and environmental justice, geospatial analysis, and roles in energy, cleantech and innovation programs. The best way to reach me is by email at <b>figbadam@buffalo.edu</b>.</p>
+    <div class="actions" style="margin-bottom:0">
+      <a class="btn" href="Faithwin_Gbadamosi_CV.pdf">Download CV (PDF)</a>
+      <a class="tl" href="mailto:figbadam@buffalo.edu">Email</a>
+      <a class="tl" href="https://www.linkedin.com/in/faithwingbadamosi">LinkedIn</a>
+      <a class="tl" href="https://github.com/Faithwinn">GitHub</a>
+    </div>
+    <footer>© 2026 Faithwin Gbadamosi · CV updated September 2026</footer>
+  </section>
+</main>
+</div>
+<style>.nexus .inv{fill:var(--bg)}</style>
+<script>
+{
+const projects=[
+ {tag:"Dissertation",t:"The nexus of energy, environment and health in the Niger Delta",p:"How does decades of oil extraction show up in the land, the water and people's bodies? I combine spill records, satellite imagery and fieldwork to answer that, and to point to safer ways for industry and government to engage.",li:["Collected and cleaned 1,500+ geotagged oil spill records from 2017 to 2024","Built a contamination index from spill frequency, volume and land and water exposure","Produced high-resolution risk maps to support policy, surveillance and restoration","Gathering lived experience data on livelihood changes caused by energy disruption, with fieldwork in Rivers and Bayelsa States"],c:["Spatial modeling","Contamination index","Fieldwork"]},
+ {tag:"Remote sensing",t:"Tracking artisanal oil refining from space",p:"Illegal refining camps leave a clear signature in vegetation. Using Sentinel-2 NDVI and kernel density estimation, I measure how that disturbance shifts over time and where it is spreading.",li:["Paper under review at Environmental Science and Pollution Research"],c:["Sentinel-2","NDVI","Kernel density"]},
+ {tag:"Environmental justice",t:"Sacrifice zones across two oil frontiers",p:"A comparative study of oil-induced environmental health injustice in the Niger Delta and the Ecuadorian Amazon, written with Kawthar Abdulmojeed.",li:["Paper under review at ACME: An International Journal for Critical Geographies"],c:["Critical geography","Comparative analysis"]},
+ {tag:"Food and health",t:"UBEats: food environments and children's health",p:"In the Food Systems and Healthy Communities Planning Lab, I modeled how five built environment features relate to eating behaviors, and how well children can reach food outlets and recreation spaces.",li:["Accessibility analysis and spatial visualization in ArcGIS"],c:["ArcGIS","Accessibility","Built environment"]},
+ {tag:"Critical minerals",t:"From oil to critical minerals",p:"The energy transition is moving extraction from oil toward minerals such as copper, lithium and rare earths. My years studying oil landscapes shape how I look at this shift: where the minerals come from, who lives nearby, and how innovation can make supply chains cleaner. At the National Laboratory of the Rockies I work on federally funded critical minerals programs.",li:["InnovateNLR: supported a researcher cohort working on critical minerals problems, alongside grid power and digital infrastructure","Energy Innovation Showcase: helped run the 2026 event, where critical minerals was a focus area","Industry Growth Forum 2027: contributing to the choice of technology areas, including how to scope critical minerals for startup recruitment"],c:["Supply chains","Processing","Energy transition"]},
+ {tag:"Energy innovation",t:"Moving lab research toward the market",p:"At the National Laboratory of the Rockies I support programs that connect researchers with industry, investors and startups across the energy system.",li:["InnovateNLR: engaged 50+ lab researchers to develop ideas in critical minerals, digital infrastructure and grid power","Chevron Studio: helped researchers explain their ideas and scale them through field trials","Industry Growth Forum: planning the 2027 startup pitch competition"],c:["Tech transfer","Critical minerals","Grid"]}
+];
+const news=[
+ ["2026","Presented at the International Society of Environmental Epidemiology annual conference in Munich, Germany."],
+ ["2026","Presented at the International Medical Geography Symposium in Toronto, Canada."],
+ ["2026","Received the Mark Diamond Research Fund award to support my dissertation fieldwork."],
+ ["2026","Invited by the President of ECOSOC to the High-Level Political Forum on Sustainable Development at UN Headquarters, New York."],
+ ["Sep 2026","Helped run the NLR Energy Innovation Showcase in Avon, Colorado, with focus areas in critical minerals, advanced materials and digital infrastructure."],
+ ["Jul 2026","Joined the National Laboratory of the Rockies as a Graduate Intern in the Innovation and Entrepreneurship Center."],
+ ["2026","Received the Teaching Excellence Award from the UB Department of Geography."],
+ ["2025","Published a scoping review on oil, environment and health in the Niger Delta in Tropical Medicine & International Health."]
+];
+const edu=[["PhD, Geography","University at Buffalo, SUNY","2023–2028 (expected)"],["MSc, Geographic Information Systems","University at Buffalo, SUNY","2023–2025"],["BSc, Geography","University of Ibadan, Nigeria","2021"]];
+const jobs=[["Graduate Intern","National Laboratory of the Rockies, Innovation and Entrepreneurship Center","2026–present"],["Instructor and Teaching Assistant","University at Buffalo","2023–present"],["Research Assistant, UBEats","Food Systems and Healthy Communities Planning Lab, UB","2024"],["Geomarketing Surveyor","Groupe Vivendi Africa, Ibadan","2022–2023"],["Project Intern","Bovas and Company Oil and Gas Ltd, Ibadan","2021–2022"]];
+const awards=[["Mark Diamond Research Fund","University at Buffalo","2026"],["GSEU Professional Development Award","University at Buffalo","2026"],["Teaching Excellence Award","UB Department of Geography","2026"],["Michael Woldenberg Field Scholarship","University at Buffalo","2025"],["StartUp Fellowship","UB Department of Geography","2023"],["Best Graduating Student","Geography, University of Ibadan","2022"],["Best Final Year Thesis","Faculty of the Social Sciences, University of Ibadan","2022"]];
+const talks=[["Oral presentation","International Society of Environmental Epidemiology, Munich","2026"],["Oral presentation","International Medical Geography Symposium, Toronto","2026"],["Oral presentation","American Association of Geographers Annual Meeting","2025"],["Invitee and organizing team","Energy Innovation Showcase, National Laboratory of the Rockies","2026"]];
+const intl=[["Invited attendee","UN High-Level Political Forum on Sustainable Development, New York","2026"],["Youth Delegate","ECOSOC Partnership Forum, Major Group for Children and Youth","2026"],["Nominee","Seventh UN Environment Assembly (UNEA-7), Nairobi",""]];
+const review=[["Independent Reviewer","Frontiers in Environmental Science"],["Reviewer","Frontiers in Nutrition"],["Peer Reviewer","Local Economy (SAGE)"],["Peer Reviewer","Fintech and Sustainable Innovation"]];
+const members=[["Member","International Society of Environmental Epidemiology","2026"],["Member","Women in Energy","2026"],["Member","American Association of Geographers","2023–present"],["Campus Director","Hult Prize",""],["President","Students Entrepreneurship and Innovation Hub",""]];
+
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const row=([a,b,d=""])=>`<li><div><b>${esc(a)}</b><small>${esc(b)}</small></div><span class="d">${esc(d)}</span></li>`;
+const put=(id,arr)=>document.getElementById(id).innerHTML=arr.map(row).join('');
+document.getElementById('projects').innerHTML=projects.map(p=>`<div class="proj"><h3>${esc(p.t)}</h3><p>${esc(p.p)}</p><ul>${p.li.map(x=>`<li>${esc(x)}</li>`).join('')}</ul><div class="kw">${esc(p.tag)} · ${p.c.map(esc).join(' · ')}</div></div>`).join('');
+document.getElementById('newsList').innerHTML=news.map(([d,t])=>`<li><span class="d">${esc(d)}</span><div>${esc(t)}</div></li>`).join('');
+put('edu',edu);put('jobs',jobs);put('awardList',awards);put('talkList',talks);put('intl',intl);put('review',review);put('members',members);
+}
+</script>
+</body>
+</html>
